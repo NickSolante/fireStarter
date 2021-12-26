@@ -5,7 +5,7 @@ import axios, { AxiosResponse } from "axios";
 
 const path =
   process.env.NODE_ENV === "production"
-    ? "https://firebrand-v8fa3.ondigitalocean.app"
+    ? process.env.API_URL
     : "http://localhost:3000";
 
 const qrCodes = async (body: string): Promise<AxiosResponse<string, any>> => {
