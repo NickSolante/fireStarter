@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import axios, { AxiosResponse } from "axios";
 
-const path = process.env.NODE_ENV;
+const path = "https://firebrand-v8fa3.ondigitalocean.app";
 
 const qrCodes = async (body: string): Promise<AxiosResponse<string, any>> => {
   const res = await axios.post(`${path}/scan`, { url: body });
