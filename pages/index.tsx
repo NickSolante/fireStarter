@@ -3,10 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import axios, { AxiosResponse } from "axios";
 
-const path =
-  process.env.NODE_ENV === "production"
-    ? `${process.env.API_URL}`
-    : "http://localhost:3000";
+const path = process.env.API_URL;
 
 const qrCodes = async (body: string): Promise<AxiosResponse<string, any>> => {
   const res = await axios.post(`${path}/scan`, { url: body });
