@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "build:env": "envsubst < ./.env.production.template > ./.env.production.local",
     "build": "next build",
     "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
     "lint": "next lint",
