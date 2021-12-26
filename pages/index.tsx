@@ -10,6 +10,7 @@ const path =
 
 const qrCodes = async (body: string): Promise<AxiosResponse<string, any>> => {
   const res = await axios.post(`${path}/scan`, { url: body });
+  console.log(process.env.API_URL);
   console.log(res);
   return res;
 };
