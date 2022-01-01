@@ -8,7 +8,7 @@ import { ifError } from "assert";
 const path = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:3000";
 
 const qrCodes = async (body: string): Promise<AxiosResponse<any, any>> => {
-  const res = await axios.post(`${path}/scan`, { url: body });
+  const res = await axios.post(`${path}/qrCode`, { url: body });
 
   return res;
 };
